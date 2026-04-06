@@ -14,34 +14,40 @@ import Particles from "@/components/Particles";
 
 const timeline = [
   {
-    year: "april 2019 – march 2021",
+    year: "2019 - 2021",
     role: "Comic Artist",
-    company: "Commissioned Work",
-    desc: "Created comics and illustrations for various clients. Gained experience in visual storytelling and client collaboration.",
+    company: "Fiverr",
+    desc: "Managed end-to-end creative workflows for diverse international clients, consistently meeting strict deadlines and high quality-standards.",
   },
   {
-    year: "july 2021 – february 2023",
-    role: "Junior Front-End Developer",
-    company: "Freelance",
-    desc: "Built responsive websites and web apps for a client using React and Tailwind CSS. Developed strong skills in front-end development and client communication.",
+    year: "2021 - 2023",
+    role: "Full-Stack Developer",
+    company: "Onlinejobs.ph",
+    desc: "Architected and deployed a high-performance feature module for an instrument trainer app, optimizing real-time audio/visual synchronization to ensure a seamless, low-latency user experience",
   },
   {
-    year: "Feb 2023 – Jul 2023",
+    year: "2023 - 2023",
     role: "Front-End Developer",
     company: "Dulles Glass",
-    desc: "Collaborated with designers to implement UI concepts. Fixed front-end issues and improved user satisfaction.",
+    desc: "Translated high-fidelity designer mockups into responsive web interfaces, ensuring a seamless transition from concept to production. ",
   },
   {
-    year: "Aug 2023 – Mar 2024",
-    role: "Full Stack Developer",
-    company: "Freelancer",
-    desc: "Built full-stack apps using Python and React, optimized existing platforms, and delivered features exceeding client expectations.",
+    year: "2023 - 2024",
+    role: "Full-Stack Developer",
+    company: "Onlinejobs.ph",
+    desc: "Collaborated directly with clients to refine project scopes, consistently delivering features that exceeded functional and aesthetic expectations.",
   },
   {
-    year: "Mar 2024 – Aug 2025",
+    year: "2024 - 2025",
     role: "UI/UX Designer & Front-End Developer",
     company: "Blockchain Management Corporation",
-    desc: "Led front-end development of fullcheckId.com and devreg.org using React.js and Tailwind. Used builder.io + Figma to convert designs into responsive components.",
+    desc: "Pioneered front-end development for fullidcheck.com and devreg.org using React.js and Tailwind CSS, focusing on high-performance, responsive layouts.",
+  },
+  {
+    year: "2025 - 2026",
+    role: "Full-Stack Developer",
+    company: "Pianogod",
+    desc: "Iterated on core application features based on client feedback, enhancing the overall user experience (UX) and streamlining navigation for improved workflow efficiency.",
   },
 ];
 
