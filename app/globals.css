@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: "M PLUS Rounded 1c", "Montserrat", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-light-bg dark:bg-dark-bg text-zinc-800 dark:text-zinc-100 font-sans transition-colors duration-300;
+    overflow-x: hidden;
+  }
+
+  /* Accent color: red in light mode, green in dark mode */
+  :root {
+    /* Default to dark accent to avoid flash on first paint when theme class isn't applied yet */
+    --accent: 100 255 218;
+  }
+
+  /* next-themes toggles `light` / `dark` class on <html> */
+  .light {
+    --accent: 255 0 229;
+    --secondary: 100 255 218;
+  }
+
+  .dark {
+    --secondary: 100 255 218;
+    --accent: 255 0 229;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-accent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent/60;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-xl underline underline-offset-8 font-semibold tracking-normal dark:text-zinc-200 text-zinc-600 font-mono mb-3 flex items-center;
+  }
+
+  .section-title::before {
+    content: "";
+    /* @apply block w-8 h-px bg-accent; */
+  }
+
+  .card {
+    @apply bg-zinc-100 dark:bg-dark-surface border border-light-border dark:border-dark-border rounded-2xl overflow-hidden transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-accent/40 shadow-lg shadow-accent/5;
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 bg-transparent  text-secondary rounded-lg font-mono text-sm font-medium transition-all duration-200;
+  }
+
+  .btn-primary:hover {
+    @apply bg-secondary/10 shadow-lg shadow-secondary/20;
+  }
+
+  .hover-glow {
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease,
+      filter 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow:
+      6px 6px 22px rgba(255, 0, 229, 0.35),
+      6px 6px 16px rgba(100, 255, 218, 0.25);
+    transform: translateY(-1px);
+    filter: brightness(1.15);
+    color: rgb(var(--accent));
+  }
+
+  .skill-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-zinc-300 dark:border-dark-border bg-zinc-100 dark:bg-dark-muted/30 text-zinc-500 dark:text-zinc-400 transition-all duration-200;
+  }
+
+  .skill-tag:hover {
+    @apply border-accent/50 text-accent;
+  }
+
+  .noise-bg {
+    position: relative;
+  }
+
+  .noise-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* Animated gradient border for active nav */
+.nav-active {
+  background: linear-gradient(90deg, #64ffda22, transparent);
+  border-left: 2px solid #64ffda;
+}
+
+/* Grid dot pattern */
+.grid-pattern {
+  background-image: radial-gradient(
+    circle,
+    rgba(100, 255, 218, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+}
+
+/* Wave header */
+.wave-header {
+  margin-top: -40px;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  @apply bg-light-bg dark:bg-dark-bg;
+}
+
+.wave-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle at 50% 20%,
+    rgba(255, 255, 255, 0.06),
+    transparent 90%
+  );
+  mix-blend-mode: overlay;
+}
+
+.wave-header .wave-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+#particles,
+#particles2,
+#particles3 {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  display: block;
+  position: absolute;
+  border-radius: 9999px;
+  background: rgba(var(--accent, 255 0 229) / 0.85);
+  box-shadow: 0 0 18px rgba(var(--accent, 255 0 229) / 0.55);
+  will-change: transform, opacity;
+  animation-name: moveUp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-120vh);
+  }
+}
