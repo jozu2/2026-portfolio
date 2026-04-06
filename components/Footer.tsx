@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-import { MdEmail } from 'react-icons/md'
+import Link from "next/link";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <p className="text-xs font-mono text-zinc-400 dark:text-zinc-500">
           © {new Date().getFullYear()} Joshua Melendres
           <span className="text-accent mx-1">·</span>
-          Built with Next.js & Tailwind
+          Portfolio
         </p>
         <div className="flex items-center gap-4">
           <Link
@@ -38,5 +38,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

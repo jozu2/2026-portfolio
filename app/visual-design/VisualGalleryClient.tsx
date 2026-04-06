@@ -142,7 +142,7 @@ export default function VisualGalleryClient() {
               <AnimatedSection key={item.id} delay={0.15 + i * 0.05}>
                 <Link
                   href={item.href}
-                  className={`block h-[200px] overflow-hidden rounded-lg border border-light-border dark:border-dark-border bg-white/90 dark:bg-dark-surface shadow-sm transition-all duration-300 hover:-translate-y-1 ${i % 2 === 0 ? 'hover:shadow-accent' : 'hover:shadow-secondary'}`}
+                  className={`block h-[200px] overflow-hidden rounded-lg border border-light-border dark:border-dark-border bg-white/90 dark:bg-dark-surface shadow-sm transition-all duration-300 hover:-translate-y-1 ${i % 2 === 0 ? "hover:shadow-accent" : "hover:shadow-secondary"}`}
                 >
                   <div className="relative h-full overflow-hidden">
                     <Image

@@ -73,8 +73,8 @@ export default function WaveHeader() {
       const cx = canvas.width / 2;
       const cy = canvas.height / 2 + 30;
       const fov = 700;
-      const gridSize = 26;
-      const spacing = 22;
+      const gridSize = 12;
+      const spacing = 55;
       const depth = 750;
 
       const rotY = time * 0.00025 + mouseX * 0.6;
