@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import WaveHeader from "@/components/WaveHeader";
-import Particles from "@/components/Particles";
 
 export const metadata: Metadata = {
   title: "Joshua Melendres — Full Stack Developer & Creative",

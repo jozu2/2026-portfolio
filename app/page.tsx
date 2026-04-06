@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
-import WaveHeader from "@/components/WaveHeader";
 import Image from "next/image";
 import myImg from "@/app/images/my-dev-pic.png";
 import Link from "next/link";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import { HiArrowRight, HiCode } from "react-icons/hi";
+import { HiArrowRight } from "react-icons/hi";
 import { BsBriefcaseFill } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
 import Particles from "@/components/Particles";

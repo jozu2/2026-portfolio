@@ -109,7 +109,7 @@ export default function WaveHeader() {
           const y1 = Math.sin((col + 1 + row * 1.3) * 0.5 + time * 0.002) * 24;
 
           const [px0, py0, pz0] = project(x0, y0, z, cx, cy, fov, rotY, rotX);
-          const [px1, py1, pz1] = project(x1, y1, z, cx, cy, fov, rotY, rotX);
+          const [px1, py1] = project(x1, y1, z, cx, cy, fov, rotY, rotX);
 
           const alpha = Math.max(0, 1 - (pz0 / depth) * 1.1);
           ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${0.45 * alpha})`;
