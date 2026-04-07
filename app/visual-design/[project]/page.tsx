@@ -15,6 +15,7 @@ import art10 from "@/app/images/arts/project10.png";
 import art11 from "@/app/images/arts/project11.png";
 import art12 from "@/app/images/arts/project12.png";
 import art13 from "@/app/images/arts/project13.png";
+import art14 from "@/app/images/arts/project14.png";
 
 import subImgArt6Num1 from "@/app/images/arts/art6sub1.png";
 import subImgArt9Num1 from "@/app/images/arts/art9sub1.png";
@@ -153,6 +154,14 @@ const artItems = [
     subtitle:
       "A template design containing layout and visual elements for a presentation.",
     stackUsed: ["Photoshop"],
+  },
+  {
+    id: "project14",
+    src: art14,
+    title: "Vector Art",
+
+    subtitle: "A Simple Clean Vector art",
+    stackUsed: ["Illustrator"],
   },
 ];
 

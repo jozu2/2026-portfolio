@@ -18,6 +18,7 @@ import art10 from "@/app/images/arts/project10.png";
 import art11 from "@/app/images/arts/project11.png";
 import art12 from "@/app/images/arts/project12.png";
 import art13 from "@/app/images/arts/project13.png";
+import art14 from "@/app/images/arts/project14.png";
 
 const artItems = [
   {
@@ -115,6 +116,13 @@ const artItems = [
     title: "Website Concept",
     subtitle: "Landing page imagery and branding presentation",
     href: "/visual-design/project11",
+  },
+  {
+    id: "project14",
+    src: art14,
+    title: "Vector Art",
+    subtitle: "A Simple Clean Vector art",
+    href: "/visual-design/project14",
   },
 ];
 
